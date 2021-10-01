@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* CSS Reset*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -18,7 +15,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -47,8 +43,10 @@ table {
 	border-spacing: 0;
 }
 
+/* General Styles */
 * {
     box-sizing: border-box;
+    /*border: 1px solid grey;*/
 }
 
 html, body {
@@ -71,6 +69,44 @@ p {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* Header Styles*/
+header {
+    display: flex;
+    flex-flow: row wrap;
+    height: 10vh;
+    margin: 3% 0;
+}
+
+header .logo {
+    background-image: url("../img/lambda-black.png");
+    background-repeat: no-repeat;
+    width: 20%;
+}
+
+header nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    font-size: 14px;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+    padding: 0 8%;
+    transition: 0.4s;
+}
+header nav a:hover {
+    color: grey;
+}
+
+/* Top Section Styles */
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -79,12 +115,33 @@ p {
     border-bottom: 1px dashed black;
 }
 
+.jumbo {
+    background-image: url("../img/jumbo.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 2%;
+}
+.jumbo-about {
+    background-image: url("../img/jumbo-about.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 2%;
+}
+
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 20px;  
 }
+/* Top About Styles */
+.top-content.about-page {
+    justify-content: flex-start;
+    padding: 2%;
+}
 
+/* Middle Section Styles*/
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -111,7 +168,140 @@ p {
     align-items: center;
     justify-content: center;
 }
+.middle-content .boxes .teal {
+    width: 12.5%;
+    height: 100px;
+    background: teal;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .gold {
+    width: 12.5%;
+    height: 100px;
+    background: gold;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .cadetblue {
+    width: 12.5%;
+    height: 100px;
+    background: cadetblue;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .coral {
+    width: 12.5%;
+    height: 100px;
+    background: coral;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .crimson {
+    width: 12.5%;
+    height: 100px;
+    background: crimson;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .forestgreen {
+    width: 12.5%;
+    height: 100px;
+    background: forestgreen;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .darkorchid {
+    width: 12.5%;
+    height: 100px;
+    background: darkorchid;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .hotpink {
+    width: 12.5%;
+    height: 100px;
+    background: hotpink;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .indigo {
+    width: 12.5%;
+    height: 100px;
+    background: indigo;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.middle-content .boxes .dodgerblue {
+    width: 12.5%;
+    height: 100px;
+    background: dodgerblue;
+    margin: 20px 2.5%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* About Middle Content Styles */
+.middle-content.about-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 0px dashed white;
+}
 
+.about-page.info {
+    width: 48%;
+    padding: 2% 0;
+    margin-bottom: 2%;
+    border-bottom: 1px dashed black;
+}
+
+.about-page.info p, .about-page.info h2 {
+    margin: 2% 0;
+}
+
+.about-page button {
+    border: 2px solid black;
+    background-color: white;
+    padding: 2% 5%;
+    margin: 2% 0;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.about-page button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Bottom Section Styles */
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -125,7 +315,13 @@ p {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+/* Bottom About Section Styles */
+.bottom-about {
+    padding: 2%;
+    margin-bottom: 3%;
+}
 
+/* Footer Styles */
 footer {
     width: 100%;
     background: black;
@@ -143,4 +339,8 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+    transition: 0.4s;
+}
+footer nav a:hover {
+    color: lightgrey;
 }
